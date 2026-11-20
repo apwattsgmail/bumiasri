@@ -47,7 +47,8 @@ h3 { margin-bottom: .75rem; font-size: 1.55rem; }
 .button-primary { color: white; background: var(--forest); }
 .button-primary:hover, .button-primary:focus-visible { background: var(--forest-dark); }
 .button-secondary { color: var(--forest); border-color: var(--forest); background: transparent; }
-.hero-art { position: relative; min-height: 31rem; overflow: hidden; background: linear-gradient(#a7d4d2 0 48%, #7faa74 48%); }
+.hero-art { position: relative; min-height: 31rem; overflow: hidden; background: var(--forest); }
+.hero-art img { display: block; width: 100%; height: 100%; min-height: inherit; object-fit: cover; object-position: center; }
 .sun { position: absolute; top: 12%; right: 15%; width: 7rem; height: 7rem; border-radius: 50%; background: #f4cf60; box-shadow: 0 0 0 1.5rem rgba(244,207,96,.2); }
 .hill { position: absolute; bottom: -8%; border-radius: 50% 50% 0 0; }
 .hill-back { left: -20%; width: 115%; height: 52%; background: #4f8a64; transform: rotate(8deg); }
