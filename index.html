@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="News, events and community feedback for Bumi Asri village.">
+  <meta name="theme-color" content="#174d3b">
+  <title>Bumi Asri Community</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bumi Asri home">
+      <span class="brand-mark" aria-hidden="true">BA</span>
+      <span><strong>Bumi Asri</strong><small>Community Organisation</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="#news">News</a>
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a class="nav-action" href="#feedback">Give feedback</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Welcome, neighbours</p>
+        <h1>A stronger village starts with all of us.</h1>
+        <p class="hero-intro">Find local news, join upcoming activities and share ideas that can make Bumi Asri an even better place to live.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#news">Read community news</a>
+          <a class="button button-secondary" href="#feedback">Share an idea</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+        <div class="house"><span></span></div>
+        <div class="tree tree-one"></div>
+        <div class="tree tree-two"></div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="section-heading">
+        <div><p class="eyebrow">From around the village</p><h2>Latest news</h2></div>
+        <p>Updates from your community organisation. The stories below are sample content ready to be replaced.</p>
+      </div>
+      <div class="card-grid">
+        <article class="news-card featured">
+          <p class="tag">Sample announcement</p>
+          <h3>Monthly community meeting</h3>
+          <p>Residents are invited to discuss local priorities and upcoming neighbourhood activities.</p>
+          <p class="meta">Replace with date Â· Village hall</p>
+        </article>
+        <article class="news-card">
+          <p class="tag">Sample update</p>
+          <h3>Neighbourhood clean-up</h3>
+          <p>Join neighbours for a morning of caring for shared streets and green spaces.</p>
+          <p class="meta">Replace with date Â· Meeting point TBC</p>
+        </article>
+        <article class="news-card">
+          <p class="tag">Sample notice</p>
+          <h3>Community services</h3>
+          <p>Add useful information here about health, administration or support available to residents.</p>
+          <p class="meta">Information placeholder</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="events-section" id="events">
+      <div>
+        <p class="eyebrow light">Meet your neighbours</p>
+        <h2>Whatâ€™s happening</h2>
+        <p>Use this space for village meetings, volunteer days, celebrations and other activities.</p>
+      </div>
+      <div class="event-list">
+        <article><div class="date-box"><strong>00</strong><span>MON</span></div><div><p class="tag light">Sample event</p><h3>Residentsâ€™ forum</h3><p>Time and venue to be confirmed</p></div></article>
+        <article><div class="date-box"><strong>00</strong><span>MON</span></div><div><p class="tag light">Sample event</p><h3>Family activity day</h3><p>Time and venue to be confirmed</p></div></article>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div>
+        <p class="eyebrow">Working together</p>
+        <h2>About the organisation</h2>
+      </div>
+      <div class="about-copy">
+        <p>Bumi Asri Community Organisation helps residents stay informed, take part in local decisions and support one another.</p>
+        <p>This website is a shared noticeboard and an open door: a place to hear what is happening and tell the committee what matters to you.</p>
+        <div class="principles" aria-label="Our priorities">
+          <span>Clear information</span><span>Open participation</span><span>Neighbourly action</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback-section" id="feedback">
+      <div class="feedback-intro">
+        <p class="eyebrow">Your voice matters</p>
+        <h2>Share your feedback</h2>
+        <p>Send an idea, report a local concern or suggest an activity. Please do not include sensitive personal information.</p>
+      </div>
+      <form id="feedback-form">
+        <div class="field-row">
+          <label>Name <span>(optional)</span><input name="name" autocomplete="name"></label>
+          <label>Topic<select name="topic"><option>Suggestion</option><option>Local concern</option><option>Community event</option><option>Website feedback</option><option>Other</option></select></label>
+        </div>
+        <label>Your message<textarea name="message" rows="6" required minlength="10" placeholder="Tell us what you would like the community organisation to knowâ€¦"></textarea></label>
+        <button class="button button-primary" type="submit">Prepare feedback</button>
+        <p class="form-note" id="form-status" role="status">Your message will be prepared for submission through GitHub after the site repository is connected.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Bumi Asri</strong><p>Community news, participation and local action.</p></div>
+    <div><p class="footer-label">Contact</p><a id="contact-email" href="mailto:community@example.org">community@example.org</a></div>
+    <div><p class="footer-label">Quick links</p><a href="#news">News</a><a href="#events">Events</a><a href="#feedback">Feedback</a></div>
+    <p class="copyright">Â© <span id="year"></span> Bumi Asri Community Organisation</p>
+  </footer>
+</body>
+</html>
+
