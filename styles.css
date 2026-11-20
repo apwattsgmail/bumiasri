@@ -103,6 +103,7 @@ footer a { display: block; width: fit-content; margin: .35rem 0; }
 
 .sign-in-dialog { width: min(92vw, 35rem); max-height: 90vh; padding: 2rem; border: 0; border-radius: var(--radius); color: var(--ink); background: var(--cream); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
 .sign-in-dialog::backdrop { background: rgba(4, 25, 19, .72); backdrop-filter: blur(4px); }
+.sign-in-dialog.dialog-fallback { position: fixed; inset: 50% auto auto 50%; z-index: 30; transform: translate(-50%, -50%); }
 .sign-in-dialog h2 { margin-bottom: .65rem; font-size: clamp(2rem, 7vw, 3.25rem); }
 .sign-in-dialog form { margin-top: 1.5rem; padding: 1.5rem; }
 .dialog-close { position: absolute; top: .8rem; right: .8rem; width: 2.5rem; height: 2.5rem; border: 0; border-radius: 50%; color: var(--ink); background: rgba(23,77,59,.08); font-size: 1.6rem; line-height: 1; cursor: pointer; }
