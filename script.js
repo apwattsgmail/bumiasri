@@ -41,9 +41,17 @@ document.querySelector('#feedback-form').addEventListener('submit', (event) => {
 });
 
 const demoResidents = {
-  '#202 BLOK A': '1ba57e72e23154d8cc3d2aca34ccdd6181094d68487cd2f00a54b382ff9938f8',
+  '#202 BLOK G': '1ba57e72e23154d8cc3d2aca34ccdd6181094d68487cd2f00a54b382ff9938f8',
   '#118 BLOK C': '4dc1ee906e41d7a4fcecaaebd9a1181d568a556e73d1eaff7e9abe0e191f4e31',
-  '#45 BLOK F': '180d803a580fabe1a24ddfdf6bf51ecbea0eb81f256b69ee6b39b33d294f6ebf'
+  '#252 BLOK G': '85f5e10431f69bc2a14046a13aabaefc660103b6de7a84f75c4b96181d03f0b5',
+  '#45 BLOK F': '180d803a580fabe1a24ddfdf6bf51ecbea0eb81f256b69ee6b39b33d294f6ebf',
+  '#103 BLOK E': '5dd67fac9b4bffc28f190445a42722311de7e4e68bf9107fd488f70fce3d1fd7',
+  '#51 BLOK G': '0e138a7406b6583942db7e3fea19a349e9ac607bf008a0cfdc30c5f675d56b5d',
+  '#224 BLOK G': '18fb6daeb2d086a54d84a4e6084a6b90860fe66bb4fd74c70cb87fa073f26af0',
+  '#175 BLOK G': '3a8c5e6386b33beb1c4c17971ad538b021346acb5e889162ec04780c871be45d',
+  '#122 BLOK D': 'f42a5d799b942203790280516dbb84d40dd57d5e25767cf355ee1ad027539134',
+  '#115 BLOK C': '96ef0ae98e5df8af1429ff42a681ba00017b649f3a1f69bb49448ef7a09478c8',
+  '#113 BLOK C': 'efc17d45aa42f529aa0e553fc4fdb6885662c6a30a7cb675a2ce834cc135c03e'
 };
 
 const signInDialog = document.querySelector('#sign-in-dialog');
@@ -54,7 +62,7 @@ const residentAddress = document.querySelector('#resident-address');
 
 function normalizeAddress(value) {
   const normalized = value.trim().toUpperCase().replace(/\s+/g, ' ');
-  const match = normalized.match(/^#?(\d+)\s+BLOK\s+([A-F])$/);
+  const match = normalized.match(/^#?(\d+)\s+BLOK\s+([A-G])$/);
   return match ? `#${match[1]} BLOK ${match[2]}` : normalized;
 }
 
