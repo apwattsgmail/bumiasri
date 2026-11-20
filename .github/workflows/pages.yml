@@ -35,4 +35,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-warning: in the working copy of '.github/workflows/pages.yml', LF will be replaced by CRLF the next time Git touches it
