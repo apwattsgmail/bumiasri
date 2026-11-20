@@ -23,6 +23,7 @@
       <a href="#events">Events</a>
       <a href="#about">About</a>
       <a class="nav-action" href="#feedback">Give feedback</a>
+      <button class="account-button" id="account-button" type="button">Resident sign in</button>
     </nav>
   </header>
 
@@ -124,6 +125,49 @@
     <div><p class="footer-label">Quick links</p><a href="#news">News</a><a href="#events">Events</a><a href="#feedback">Feedback</a></div>
     <p class="copyright">Â© <span id="year"></span> Bumi Asri Community Organisation</p>
   </footer>
+
+  <dialog class="sign-in-dialog" id="sign-in-dialog" aria-labelledby="sign-in-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Close sign-in window">Ã—</button>
+    <div id="sign-in-view">
+      <p class="eyebrow">Residents</p>
+      <h2 id="sign-in-title">Sign in to Bumi Asri</h2>
+      <p>Use the house number and block registered with the community office.</p>
+      <form id="sign-in-form">
+        <label>House address
+          <input name="address" required autocomplete="username" placeholder="#202 Blok A" aria-describedby="address-help">
+        </label>
+        <p class="field-help" id="address-help">Format: house number followed by Blok Aâ€“F</p>
+        <label>Password
+          <input name="password" type="password" required autocomplete="current-password">
+        </label>
+        <button class="button button-primary" type="submit">Sign in</button>
+        <p class="form-error" id="sign-in-status" role="alert"></p>
+      </form>
+      <aside class="registration-note">
+        <strong>Need an account?</strong>
+        <p>Resident accounts are created in person at the community office. Please bring proof of your Bumi Asri address.</p>
+      </aside>
+      <details class="demo-accounts">
+        <summary>Demo accounts</summary>
+        <ul>
+          <li><code>#202 Blok A</code> Â· password <code>rotti</code></li>
+          <li><code>#118 Blok C</code> Â· password <code>melati</code></li>
+          <li><code>#45 Blok F</code> Â· password <code>aman</code></li>
+        </ul>
+      </details>
+    </div>
+    <div id="resident-view" hidden>
+      <p class="eyebrow">Resident account</p>
+      <h2>Welcome home</h2>
+      <p>You are signed in as <strong id="resident-address"></strong>.</p>
+      <div class="resident-panel">
+        <p><strong>Account status</strong><span>Demo access</span></p>
+        <p><strong>Registration</strong><span>Community office</span></p>
+      </div>
+      <p class="demo-warning">This demonstration stores the sign-in only on this device. It does not provide access to private resident information.</p>
+      <button class="button button-secondary" id="sign-out-button" type="button">Sign out</button>
+    </div>
+  </dialog>
 </body>
 </html>
 
