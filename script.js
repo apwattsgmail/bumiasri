@@ -78,14 +78,32 @@ function updateResidentView() {
   if (signedIn) residentAddress.textContent = displayAddress(sessionAddress);
 }
 
+function openSignInDialog() {
+  if (typeof signInDialog.showModal === 'function') {
+    signInDialog.showModal();
+  } else {
+    signInDialog.setAttribute('open', '');
+    signInDialog.classList.add('dialog-fallback');
+  }
+}
+
+function closeSignInDialog() {
+  if (typeof signInDialog.close === 'function') {
+    signInDialog.close();
+  } else {
+    signInDialog.removeAttribute('open');
+    signInDialog.classList.remove('dialog-fallback');
+  }
+}
+
 accountButton.addEventListener('click', () => {
   updateResidentView();
-  signInDialog.showModal();
+  openSignInDialog();
 });
 
-document.querySelector('#dialog-close').addEventListener('click', () => signInDialog.close());
+document.querySelector('#dialog-close').addEventListener('click', closeSignInDialog);
 signInDialog.addEventListener('click', (event) => {
-  if (event.target === signInDialog) signInDialog.close();
+  if (event.target === signInDialog) closeSignInDialog();
 });
 
 document.querySelector('#sign-in-form').addEventListener('submit', async (event) => {
@@ -109,7 +127,7 @@ document.querySelector('#sign-in-form').addEventListener('submit', async (event)
 document.querySelector('#sign-out-button').addEventListener('click', () => {
   localStorage.removeItem('bumiAsriResident');
   updateResidentView();
-  signInDialog.close();
+  closeSignInDialog();
 });
 
 updateResidentView();
