@@ -2,6 +2,8 @@
 
 A lightweight, responsive community website designed for GitHub Pages. It includes sample news, events, organisation information and a feedback form that can create a pre-filled GitHub Issue.
 
+The resident sign-in is a front-end demonstration. Demo passwords are checked against hashes in the browser and the session is stored in `localStorage`. It must not be used to protect personal data. A production office-registration system requires a server-side account database, secure password hashing and authenticated sessions.
+
 ## Configure
 
 Edit `config.js` and set:
