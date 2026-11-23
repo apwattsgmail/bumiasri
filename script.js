@@ -79,7 +79,7 @@ const translations = {
 
 const originalText = new WeakMap();
 const originalAttributes = new WeakMap();
-let currentLanguage = localStorage.getItem('bumiAsriLanguage') || 'en';
+let currentLanguage = localStorage.getItem('bumiAsriLanguage') || 'id';
 
 function applyLanguage(language) {
   currentLanguage = language;
