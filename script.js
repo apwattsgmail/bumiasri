@@ -187,7 +187,7 @@ document.addEventListener('click', event => {
       showSuccess('Choice recorded for review', `You selected “${button.dataset.choice}”. A production portal would verify your identity before the vote is formally cast.`);
     }));
   } else if (action === 'pay') {
-    dialogContent.innerHTML = '<div class="success"><span class="success-mark">₨</span><h2>No payment due</h2><p>Your contributions are up to date. The next illustrative charge of Rp 150,000 is due on 1 December 2026.</p><button class="primary" id="success-close">View contribution history</button></div>';
+    dialogContent.innerHTML = '<div class="success"><span class="success-mark">₨</span><h2>No payment due</h2><p>Your contributions are up to date. The next illustrative charge of Rp 1.500 is due on 1 December 2026.</p><button class="primary" id="success-close">View contribution history</button></div>';
     dialog.showModal();
     document.querySelector('#success-close').addEventListener('click', () => { dialog.close(); showView('property'); });
   } else if (action === 'rdp-event') {
@@ -205,11 +205,11 @@ document.addEventListener('click', event => {
 const slider = document.querySelector('#area-slider');
 if (slider) slider.addEventListener('input', () => {
   const area = Number(slider.value);
-  const areaCharge = area * 200;
-  const format = value => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(value).replace('IDR', 'Rp');
+  const areaCharge = area * 2;
+  const format = value => `Rp ${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)}`;
   document.querySelector('#area-output').textContent = `${area} m²`;
   document.querySelector('#area-charge').textContent = format(areaCharge);
-  document.querySelector('#monthly-total').textContent = format(100000 + areaCharge);
+  document.querySelector('#monthly-total').textContent = format(1000 + areaCharge);
 });
 
 document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
