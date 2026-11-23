@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Bumi Asri resident portal for transparent community governance, funds, services and participation."><meta name="theme-color" content="#123f35">
@@ -8,7 +8,7 @@
 <body>
 <div class="auth-gate" id="auth-gate">
   <section class="login-card" aria-labelledby="login-title">
-    <div class="login-brand"><span class="brand-mark">BA</span><span><strong>Komunitas Bumi Asri</strong><small>Secure resident portal · Demonstration</small></span><label class="login-language"><span class="sr-only">Select language</span><select id="login-language-select" aria-label="Select language"><option value="en">English</option><option value="id">Bahasa Indonesia</option></select></label></div>
+    <div class="login-brand"><span class="brand-mark">BA</span><span><strong>Komunitas Bumi Asri</strong><small>Secure resident portal · Demonstration</small></span><label class="login-language"><span class="sr-only">Select language</span><select id="login-language-select" aria-label="Select language"><option value="id" selected>Bahasa Indonesia</option><option value="en">English</option></select></label></div>
     <div class="login-copy"><p class="eyebrow">Resident access</p><h1 id="login-title">Welcome back</h1><p>Sign in with the account assigned to your property or management role.</p></div>
     <form id="login-form"><label>Login name<input name="username" autocomplete="username" required placeholder="Example: G 202"></label><label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Enter your password"></label><button class="primary full" type="submit">Sign in</button><p class="login-error" id="login-error" role="alert"></p></form>
     <details class="demo-access"><summary>Demonstration accounts</summary><div><code>G 202</code><span>Resident</span><code>rotti123</code></div><div><code>C 118</code><span>Committee manager</span><code>melati123</code></div><div><code>AUDIT</code><span>Independent auditor</span><code>audit123</code></div><div><code>ADMIN</code><span>Administrator</span><code>manage123</code></div></details>
@@ -39,7 +39,7 @@
   <button class="profile-card" id="account-button"><span class="avatar" id="profile-initials">RP</span><span><strong id="profile-name">Resident profile</strong><small id="profile-property">Not signed in</small><em id="profile-role">Resident</em></span><span>···</span></button>
 </aside>
 <div class="workspace">
-  <header class="topbar"><button class="icon-button menu-button" id="menu-button" aria-controls="sidebar" aria-expanded="false">☰<span class="sr-only">Menu</span></button><div class="crumb"><span>Komunitas Bumi Asri</span><b>/</b><strong id="view-name">Overview</strong></div><div class="top-actions"><label class="language-picker"><span>Language</span><select id="language-select" aria-label="Select language"><option value="en">English</option><option value="id">Bahasa Indonesia</option></select></label><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button notification" aria-label="Notifications">♢<i></i></button><button class="primary small" data-action="report">+ Report an issue</button></div></header>
+  <header class="topbar"><button class="icon-button menu-button" id="menu-button" aria-controls="sidebar" aria-expanded="false">☰<span class="sr-only">Menu</span></button><div class="crumb"><span>Komunitas Bumi Asri</span><b>/</b><strong id="view-name">Overview</strong></div><div class="top-actions"><label class="language-picker"><span>Language</span><select id="language-select" aria-label="Select language"><option value="id" selected>Bahasa Indonesia</option><option value="en">English</option></select></label><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button notification" aria-label="Notifications">♢<i></i></button><button class="primary small" data-action="report">+ Report an issue</button></div></header>
   <main id="main">
     <section class="view active" id="overview-view">
       <div class="page-intro"><div><p class="eyebrow">Sunday, 22 November 2026</p><h1 id="dashboard-greeting">Good morning, Rina.</h1><p>Here’s what’s happening across Bumi Asri.</p></div><span class="illustrative">Illustrative community data</span></div>
