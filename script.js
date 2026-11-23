@@ -32,7 +32,7 @@ const translations = {
   'Community decisions':'Keputusan komunitas','Property & development':'Properti & pembangunan','Legal & governance':'Hukum & tata kelola',
   'Illustrative portal':'Portal ilustratif','Sample figures and records are clearly marked throughout.':'Angka dan catatan contoh ditandai dengan jelas.',
   'Resident profile':'Profil warga','Language':'Bahasa','Select language':'Pilih bahasa','Search':'Cari','Notifications':'Notifikasi',
-  '+ Report an issue':'+ Laporkan masalah','Sunday, 22 November 2026':'Minggu, 22 November 2026','Good morning, Rina.':'Selamat pagi, Rina.',
+  '+ Report an issue':'+ Laporkan masalah','Sunday, 22 November 2026':'Minggu, 22 November 2026','Monday, 23 November 2026':'Senin, 23 November 2026','Good morning, Rina.':'Selamat pagi, Rina.',
   'Here’s what’s happening across Bumi Asri.':'Berikut perkembangan terbaru di Bumi Asri.','Illustrative community data':'Data komunitas ilustratif',
   'Community fund':'Dana komunitas','Available balance':'Saldo tersedia','from last month':'dari bulan lalu','Open issues':'Masalah terbuka',
   'Across the community':'Di seluruh komunitas','awaiting action':'menunggu tindakan','resolved this week':'selesai minggu ini',
@@ -48,6 +48,10 @@ const translations = {
   'Adopt the 2027 community budget?':'Setujui anggaran komunitas 2027?','Review the proposed operating budget before casting your vote.':'Tinjau rancangan anggaran operasional sebelum memberikan suara.',
   'participation':'partisipasi','properties':'properti','Review and vote':'Tinjau dan pilih','Coming up':'Akan datang','Next meeting':'Pertemuan berikutnya',
   'General Assembly':'Rapat Umum','Community Hall & online':'Balai komunitas & daring','View agenda':'Lihat agenda','Add to calendar':'Tambahkan ke kalender',
+  'Coming up · Schedule changed':'Akan datang · Jadwal berubah','Public hearing with Commission D':'RDP dengan Komisi D','DPRD North Sumatra Province':'DPRD Provinsi Sumatera Utara',
+  'Commission D meeting room':'Ruang rapat Komisi D','DPRD Provsu Building, Jl. Imam Bonjol, Medan':'Gedung DPRD Provsu, Jl. Imam Bonjol, Medan',
+  'Discussion of residents’ request concerning unauthorized buildings over the northern drainage channel and PJKA land.':'Pembahasan surat permohonan warga terkait penertiban bangunan liar di atas parit sisi utara kompleks dan bangunan di atas tanah PJKA.',
+  'View details & attendee list':'Lihat detail & daftar hadir','14 registered':'14 orang terdaftar',
   'Project ledger · In progress':'Buku besar proyek · Berjalan','Drainage Improvement — Phase 1':'Perbaikan Drainase — Tahap 1','View full ledger':'Lihat buku besar lengkap',
   'Approved budget':'Anggaran disetujui','Spent to date':'Pengeluaran hingga kini','60% of budget spent':'60% anggaran terpakai','remaining':'tersisa',
   'Transparent by design':'Transparan sejak awal','Follow every rupiah from contribution to approval and completion.':'Lacak setiap rupiah dari iuran hingga persetujuan dan penyelesaian.',
@@ -186,6 +190,9 @@ document.addEventListener('click', event => {
     dialogContent.innerHTML = '<div class="success"><span class="success-mark">₨</span><h2>No payment due</h2><p>Your contributions are up to date. The next illustrative charge of Rp 150,000 is due on 1 December 2026.</p><button class="primary" id="success-close">View contribution history</button></div>';
     dialog.showModal();
     document.querySelector('#success-close').addEventListener('click', () => { dialog.close(); showView('property'); });
+  } else if (action === 'rdp-event') {
+    dialogContent.innerHTML = '<div class="event-dialog"><p class="eyebrow">RDP · Jadwal dipercepat</p><h2>Rapat Dengar Pendapat dengan Komisi D</h2><div class="event-details"><span><b>Kamis, 26 November 2026</b><small>14.00 WIB</small></span><span><b>Ruang Rapat Komisi D</b><small>Gedung DPRD Provsu, Jl. Imam Bonjol, Medan</small></span></div><p>Pembahasan surat permohonan warga mengenai penertiban bangunan liar di atas parit sisi utara kompleks serta bangunan di atas tanah PJKA.</p><h3>Daftar warga yang akan hadir</h3><ol class="attendee-list"><li>Zainuddin Nst.</li><li>Fakhruddin Hrp.</li><li>Hariadi</li><li>Dody Taher</li><li>Jhoni Siregar</li><li>Eka Haitami</li><li>Yakris Rangkuti</li><li>Ucok Herman / Pengelola</li><li>Raidir Sigalingging</li><li>Industrial Silaban</li><li>Yohannes Samosir</li><li>Edy Surahman</li><li>Zulkifli Harahap, S.H., M.H. — E.81/E.82</li><li>MER Simanjuntak — G.112</li></ol><p class="fine-print">Warga yang berkenan hadir dapat menghubungi pengelola untuk penambahan nama pada daftar.</p></div>';
+    dialog.showModal();
   } else if (action === 'rules-consultation') {
     dialogContent.innerHTML = '<div class="vote-dialog"><p class="eyebrow">Resident consultation</p><h2>Choose a starting direction</h2><p>This is an indicative consultation, not a binding vote. Formal adoption requires verified eligibility, published notice and an agreed approval threshold.</p><div class="vote-options"><button data-consultation="Democratic association">Democratic association</button><button data-consultation="Voluntary phased start">Voluntary phased start</button><button data-consultation="Need more information">Need more information</button></div><p class="fine-print">Responses should be published in aggregate without identifying individual residents.</p></div>';
     dialog.showModal();
